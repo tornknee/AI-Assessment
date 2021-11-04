@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Treasure : MonoBehaviour
 {
-    //GameObject player;
     BrainV2 playerBrain;
-
-    private void Start()
-    {
-        //player = GameObject.FindGameObjectWithTag("Player");
-       // playerBrain = player.GetComponent<BrainV2>();
-    }
+    /// <summary>
+    /// Destroys the treasure object and adds 1 to the treasureFound of the character
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         playerBrain = other.GetComponent<BrainV2>();

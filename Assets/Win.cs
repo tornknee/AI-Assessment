@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
+    //Win kinda became all my UI stuff
     public Text winText;
     public GameObject winPanel;
     bool paused = false;
+
+    /// <summary>
+    /// If character contacts the goal, displays victory panel
+    /// </summary>
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name + "wins");
@@ -16,6 +21,9 @@ public class Win : MonoBehaviour
         Time.timeScale = 0;
         winText.text = other.gameObject.name + "wins";
     }
+    /// <summary>
+    /// Self explanatory
+    /// </summary>
     public void Quit()
     {
 #if UNITY_EDITOR
@@ -24,11 +32,17 @@ public class Win : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>
+    /// Reloads the scene
+    /// </summary>
     public void Restart()
     {
         SceneManager.LoadScene(0);
     }
 
+    /// <summary>
+    /// Hit escape to bring up menu
+    /// </summary>
     private void Update()
     {
         if (!paused)

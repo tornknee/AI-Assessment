@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Pathfinding Ass/Pathfinding.unity
     guid: ede005d9076b3b34cb39f996f19ce059
+  - enabled: 1
+    path: Assets/Scenes/SmartAI/SmartAI.unity
+    guid: 3bc6ed952236eb547912c6edb5e4515b
   m_configObjects: {}
